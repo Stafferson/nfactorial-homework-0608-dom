@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <script src="https://kit.fontawesome.com/72358b5380.js" crossorigin="anonymous"></script> -->
+  </head>
+
+  <body>
+
+    <div class="popup" id="popup1">
+      <div class="popup_div">
+        <h1>Hello!</h1>
+        <h1>Please Enjoy</p>
+        <a href="#" onclick="hide('popup1')">Got it</a>
+      </div>
+    </div>
+
+    <div class="player">
+      <div class="details">
+
+        <div class="now_playing">
+          <!-- <span id="test">PLAYING x OF y</span> -->
+        </div>
+
+        <div class="track_art">
+            <video autoplay muted loop id="track_video" style="border-radius: 80%;"></video>
+        </div>
+
+        <span>
+        <div class="track_name">
+          <h1>
+            <span id="TName">Track Name</span>
+          </h1>
+        </div>
+
+        <div class="track_artist">
+          <h3>
+            <span id="TSinger">Track Singer</span>
+          </h3>
+        </div>
+
+      </div>
+   
+      <div class="buttons">
+
+        <div class="button_previous">
+          <img class="bt_previous" id="prev" src="src/previous.png"></img>
+          <!-- <i class="fa fa-step-backward fa-2x"></i> -->
+          <!-- <i class="fa-solid fa-backward fa-beat" style="--fa-animation-duration: 5s; --fa-beat-scale: 1.3;"></i> -->
+        </div>
+
+        <div class="button_pause">
+          <img class="bt_pause" id="pause_continue" src="src/play.png"></img>
+          <!-- <i class="fa fa-play-circle fa-5x"></i> -->
+        </div>
+
+        <div class="button_next">
+          <img class="bt_next" id="next" src="src/next.png"></img>
+          <!-- <i class="fa fa-step-forward fa-2x"></i> -->
+          <!-- <i class="fa-solid fa-forward fa-beat" style="--fa-animation-duration: 5s; --fa-beat-scale: 1.3;"></i> -->
+        </div>
+
+      </div>
+   
+      <div class="sliders">
+        <div class="time_song">00:00</div>
+        <input type="range" min="1" max="100"
+          value="0" class="seek_slider" onchange="seekTo()">
+        <div class="time_total_duration">00:00</div>
+      </div>
+
+   
+      <div class="sliders">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100"
+          value="50" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+    </div>
+
+    <!-- <script type="module" src="src/song_list.js"></script> -->
+    <!-- <script src="src/audio_sliders_panel.js"></script> -->
+    <!-- <script src="src/control_panel.js"></script> -->
+    <!-- <script src="src/index1.js"></script> -->
+    <script src="src/responsiveness.js"></script>
+  </body>
+</html>
